@@ -1,0 +1,15 @@
+# Segredos e arquivos locais
+.env
+.env.*
+!.env.example
+supabase/functions/.env
+
+# Sistema/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Dependências/builds locais
+node_modules/
+dist/

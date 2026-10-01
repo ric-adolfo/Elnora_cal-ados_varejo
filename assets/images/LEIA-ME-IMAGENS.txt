@@ -1,0 +1,12 @@
+IMAGENS DO SITE ELNORA
+
+banner/banner-elnora.png
+  Banner principal da loja.
+
+logo/logo-elnora-transparente.png
+  Logotipo usado no cabeçalho, conta, Pix e painel administrativo.
+
+assistente/nora-atendente.jpeg
+  Imagem da atendente virtual Elnora.
+
+Para substituir uma imagem sem editar o código, mantenha o mesmo nome, extensão e pasta.

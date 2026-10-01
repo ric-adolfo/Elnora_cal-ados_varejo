@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ric-adolfo.github.io/Elnora-Cal-ados/sitemap.xml

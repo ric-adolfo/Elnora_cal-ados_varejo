@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>ELNORA Calçados & Varejo | Elegância em cada passo</title>
+    <meta name="description" content="ELNORA Calçados & Varejo — calçados com elegância, conforto e atendimento online.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://ric-adolfo.github.io/Elnora-Cal-ados/">
+    <meta property="og:type" content="website"><meta property="og:title" content="ELNORA Calçados & Varejo"><meta property="og:description" content="Elegância em cada passo.">
+</head>
+
+<body>
+
+    <div class="benefits-bar" aria-label="Benefícios da loja">
+        <div class="benefit-item"><i class="fa-solid fa-truck-fast"></i><span><strong>Frete Grátis</strong><small>em compras acima de R$ 199</small></span></div>
+        <div class="benefit-divider"></div>
+        <div class="benefit-item"><i class="fa-regular fa-credit-card"></i><span><strong>Até 3x no Cartão</strong><small>Parcelamento sem juros</small></span></div>
+        <div class="benefit-divider"></div>
+        <div class="benefit-item"><i class="fa-solid fa-shield-halved"></i><span><strong>Compra Segura</strong><small>Seus dados protegidos</small></span></div>
+        <div class="benefit-divider"></div>
+        <button class="benefit-item whatsapp-header" type="button" id="whatsapp-header-btn"><i class="fa-brands fa-whatsapp"></i><span><strong>Atendimento via WhatsApp</strong><small>Tire suas dúvidas</small></span></button>
+    </div>
+
+    <header class="store-header">
+        <a class="logo" href="#" aria-label="Página inicial Elnora">
+            <img src="assets/images/logo/logo-elnora-transparente.png" alt="Elnora Calçados & Varejo">
+        </a>
+
+        <div class="mobile-header-social" aria-label="Redes sociais ELNORA">
+                <a class="social-nav-link instagram" href="https://www.instagram.com/vendas_elnora.calcados.varejo?stkn=MW43NzI1bHFpMmQ5eg==" target="_blank" rel="noopener noreferrer" data-social="instagram" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a class="social-nav-link facebook" href="#" data-social="facebook" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a class="social-nav-link tiktok" href="#" data-social="tiktok" aria-label="TikTok" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        <div class="mobile-actions-wrap">
+                      <button class="mobile-actions-toggle" id="mobile-actions-toggle" type="button"
+                              aria-label="Abrir menu da conta" aria-expanded="false" aria-controls="mobile-actions-menu">
+                        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                      </button>
+                      <div class="mobile-actions-menu" id="mobile-actions-menu" hidden>
+                        <button type="button" data-mobile-target="account-btn"><i class="fa-regular fa-user"></i><span>Minha Conta</span></button>
+                        <button type="button" data-mobile-target="favorites-btn"><i class="fa-solid fa-heart"></i><span>Favoritos</span></button>
+                        <button type="button" data-mobile-cart><i class="fa-solid fa-cart-shopping"></i><span>Carrinho</span><span class="mobile-cart-count" aria-label="Itens no carrinho">0</span></button>
+                      </div>
+                    </div>
+
+
+        <form class="search-container" id="header-search-form" role="search">
+            <input placeholder="Buscar calçados, modelos, marcas..." class="search-input" aria-label="Buscar produtos">
+            <button class="search-submit" type="submit" aria-label="Pesquisar"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <nav class="header-actions" aria-label="Ações da conta">
+            <button class="header-action" id="account-btn" type="button"><i class="fa-regular fa-user"></i><span>Minha Conta</span></button>
+            <button class="header-action" id="favorites-btn" type="button"><i class="fa-solid fa-heart"></i><span>Favoritos</span></button>
+            <button class="header-action cart-icon" type="button" aria-label="Abrir carrinho">
+                <span class="cart-icon-wrap"><i class="fa-solid fa-cart-shopping"></i><span class="cart-badge">0</span></span>
+                <span>Carrinho</span>
+            </button>
+        </nav>
+    </header>
+
+
+    <div class="categories-container">
+        <button class="products-menu-toggle" id="products-menu-toggle" type="button"
+                aria-expanded="false" aria-controls="categories-bar">
+            <i class="fa-solid fa-shoe-prints" aria-hidden="true"></i>
+            <span>Produtos</span>
+            <i class="fa-solid fa-chevron-down products-menu-chevron" aria-hidden="true"></i>
+        </button>
+        <nav class="categories-bar" id="categories-bar">
+            <button class="category-btn active" data-category="all"><i class="fa-solid fa-border-all"></i> Todos</button>
+            <button class="category-btn" data-category="tenis"><i class="fa-solid fa-shoe-prints"></i> Tênis</button>
+            <button class="category-btn" data-category="sandalias"><i class="fa-solid fa-shoe-prints"></i> Sandálias</button>
+            <button class="category-btn" data-category="sapatilhas"><i class="fa-solid fa-shoe-prints"></i> Sapatilhas</button>
+            <button class="category-btn" data-category="mocassins"><i class="fa-solid fa-shoe-prints"></i> Mocassins</button>
+            <button class="category-btn" data-category="botas"><i class="fa-solid fa-shoe-prints"></i> Botas</button>
+            <span class="category-divider" aria-hidden="true"></span>
+            <div class="social-nav" aria-label="Redes sociais ELNORA">
+                <a class="social-nav-link instagram" href="https://www.instagram.com/vendas_elnora.calcados.varejo?stkn=MW43NzI1bHFpMmQ5eg==" target="_blank" rel="noopener noreferrer" data-social="instagram" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a class="social-nav-link facebook" href="#" data-social="facebook" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a class="social-nav-link tiktok" href="#" data-social="tiktok" aria-label="TikTok" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <a class="master-nav-link" id="master-nav-link" href="admin/index.html" hidden aria-label="Abrir painel do Usuário Master"><i class="fa-solid fa-user-shield"></i><span>Usuário Master</span></a>
+        </nav>
+    </div>
+
+    <section class="hero-section hero-image-banner" aria-label="Elnora Calçados & Varejo">
+        <img src="assets/images/banner/banner-elnora.png" alt="Elnora Calçados & Varejo — Elegância em cada passo" class="hero-banner-img">
+        <a href="#produtos" class="hero-banner-cta" aria-label="Ver coleção Elnora">
+            <span>VER COLEÇÃO</span><i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </section>
+
+
+    <main class="products" id="produtos">
+        <div class="section-heading"><span>Nossa coleção</span><h2>Escolha o seu próximo passo</h2><p>Modelos femininos para diferentes estilos e ocasiões.</p></div>
+        <div class="products-container"></div>
+    </main>
+
+
+    
+<div class="account-panel" id="account-panel">
+      <div class="account-card account-card-v15">
+        <button class="panel-close" data-close="account-panel" type="button">&times;</button>
+        <div class="panel-brand"><img src="assets/images/logo/logo-elnora-transparente.png" alt="ELNORA"></div>
+
+        <div id="account-guest">
+          <div class="account-tabs">
+            <button type="button" class="account-tab active" data-account-tab="login">Entrar</button>
+            <button type="button" class="account-tab" data-account-tab="register">Criar conta</button>
+          </div>
+
+          <section id="account-login-view" class="account-view">
+            <h3>Bem-vindo à ELNORA</h3>
+            <p class="account-intro">Entre para acessar seus dados e continuar suas compras.</p>
+            <form id="login-form" class="elnora-form">
+              <label>E-mail
+                <input id="login-email" type="email" autocomplete="email" required placeholder="seuemail@exemplo.com">
+              </label>
+              <label>Senha
+                <span class="password-field"><input id="login-password" type="password" autocomplete="current-password" required placeholder="Sua senha"><button class="password-toggle" type="button" data-password-target="login-password" aria-label="Mostrar senha"><i class="fa-regular fa-eye"></i></button></span>
+              </label>
+              <div class="login-options">
+      <label class="remember-line"><input id="remember-login" type="checkbox"> <span>Lembrar meu e-mail</span></label>
+      <button id="forgot-password-btn" class="forgot-password-btn" type="button">Esqueci minha senha</button>
+    </div>
+              <button type="submit" class="gold-action account-main-action">Entrar na minha conta</button>
+              <div id="login-message" class="form-message" aria-live="polite"></div>
+            </form>
+          </section>
+
+          <section id="account-register-view" class="account-view hidden">
+            <h3>Crie sua conta</h3>
+            <p class="account-intro">Preencha seus dados para ter uma experiência mais completa na ELNORA.</p>
+            <form id="register-form" class="elnora-form register-grid">
+              <label class="full-field">Nome completo
+                <input id="register-name" type="text" autocomplete="name" required minlength="3" placeholder="Seu nome completo">
+              </label>
+              <label>CPF
+                <input id="register-cpf" inputmode="numeric" maxlength="14" required placeholder="000.000.000-00">
+              </label>
+              <label>Data de nascimento
+                <input id="register-birth" type="date" autocomplete="bday">
+              </label>
+              <label class="full-field">E-mail
+                <input id="register-email" type="email" autocomplete="email" required placeholder="seuemail@exemplo.com">
+              </label>
+              <label>Celular / WhatsApp
+                <input id="register-phone" type="tel" autocomplete="tel" required maxlength="15" placeholder="(11) 99999-9999">
+              </label>
+              <label>CEP
+                <input id="register-cep" inputmode="numeric" autocomplete="postal-code" maxlength="9" placeholder="00000-000">
+              </label>
+              <label class="full-field">Endereço
+                <input id="register-address" autocomplete="street-address" placeholder="Rua / Avenida">
+              </label>
+              <label>Número
+                <input id="register-number" inputmode="numeric" placeholder="Número">
+              </label>
+              <label>Complemento
+                <input id="register-complement" placeholder="Apto, bloco...">
+              </label>
+              <label>Bairro
+                <input id="register-neighborhood" placeholder="Bairro">
+              </label>
+              <label>Cidade
+                <input id="register-city" autocomplete="address-level2" placeholder="Cidade">
+              </label>
+              <label>Estado
+                <select id="register-state" autocomplete="address-level1">
+                  <option value="">UF</option><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option>
+                </select>
+              </label>
+              <label class="full-field">Senha
+                <span class="password-field"><input id="register-password" type="password" autocomplete="new-password" minlength="6" required placeholder="Mínimo de 6 caracteres"><button class="password-toggle" type="button" data-password-target="register-password" aria-label="Mostrar senha"><i class="fa-regular fa-eye"></i></button></span>
+              </label>
+              <label class="full-field">Confirmar senha
+                <span class="password-field"><input id="register-password-confirm" type="password" autocomplete="new-password" minlength="6" required placeholder="Digite a senha novamente"><button class="password-toggle" type="button" data-password-target="register-password-confirm" aria-label="Mostrar senha"><i class="fa-regular fa-eye"></i></button></span>
+              </label>
+              <label class="terms-line full-field"><input id="register-terms" type="checkbox" required> <span>Li e aceito os termos de cadastro e uso dos meus dados para funcionamento da conta.</span></label>
+              <button type="submit" class="gold-action account-main-action full-field">Criar minha conta</button>
+              <div id="register-message" class="form-message full-field" aria-live="polite"></div>
+            </form>
+          </section>
+        </div>
+
+        <div id="account-user" class="hidden account-user customer-center">
+      <div class="cc-head">
+        <div class="account-avatar"><i class="fa-regular fa-user"></i></div>
+        <div class="cc-welcome"><span>Minha Conta ELNORA</span><h3>Olá, <span id="account-user-name"></span></h3><p id="account-user-email"></p></div>
+      </div>
+
+      <div class="cc-layout">
+        <nav class="cc-nav" aria-label="Central do cliente">
+          <button class="cc-nav-btn active" data-cc-page="overview"><i class="fa-solid fa-house-chimney"></i><span>Visão geral</span></button>
+          <button class="cc-nav-btn" data-cc-page="orders"><i class="fa-solid fa-bag-shopping"></i><span>Meus pedidos</span></button>
+          <button class="cc-nav-btn" data-cc-page="favorites"><i class="fa-solid fa-heart"></i><span>Favoritos</span></button>
+          <button class="cc-nav-btn" data-cc-page="addresses"><i class="fa-solid fa-location-dot"></i><span>Endereços</span></button>
+          <button class="cc-nav-btn" data-cc-page="profile"><i class="fa-solid fa-user-pen"></i><span>Meus dados</span></button>
+          <button class="cc-nav-btn" data-cc-page="security"><i class="fa-solid fa-shield"></i><span>Segurança</span></button>
+          <button id="logout-btn" class="cc-nav-btn cc-logout" type="button"><i class="fa-solid fa-power-off"></i><span>Sair</span></button>
+        </nav>
+
+        <main class="cc-content">
+          <section class="cc-page active" data-page="overview">
+            <h4>Visão geral</h4><p class="cc-sub">Acompanhe sua conta e acesse rapidamente suas informações.</p>
+            <div class="cc-stats">
+              <button data-go="orders"><i class="fa-solid fa-box"></i><span>Pedidos</span><strong id="cc-orders-count">0</strong></button>
+              <button data-go="favorites"><i class="fa-solid fa-heart"></i><span>Favoritos</span><strong id="account-favorites-count">0</strong></button>
+              <button data-go="addresses"><i class="fa-solid fa-location-dot"></i><span>Endereço</span><strong id="account-address-status">Cadastrar</strong></button>
+            </div>
+            <div class="cc-note"><i class="fa-solid fa-bag-shopping"></i><div><strong>Compra mais rápida e prática</strong><p>Seus dados cadastrados facilitam o preenchimento da compra e do endereço de entrega.</p></div></div>
+          </section>
+
+          <section class="cc-page" data-page="orders">
+            <h4>Meus pedidos</h4><p class="cc-sub">Aqui aparecerão suas compras e o andamento de cada pedido.</p>
+            <div id="cc-orders-list" class="cc-empty"><i class="fa-solid fa-box-open"></i><strong>Nenhum pedido ainda</strong><p>Quando você finalizar uma compra, ela poderá aparecer aqui.</p></div>
+          </section>
+
+          <section class="cc-page" data-page="favorites">
+            <h4>Meus favoritos</h4><p class="cc-sub">Produtos que você marcou com o coração.</p>
+            <div class="cc-fav-summary"><i class="fa-regular fa-heart"></i><div><strong id="cc-favorites-text">0 produtos salvos</strong><p>Seus produtos favoritos aparecem abaixo.</p></div></div>
+            <div id="cc-favorites-list" class="cc-favorites-list"></div>
+            <button class="cc-primary cc-all-products" type="button" id="cc-view-products">Ver todos os produtos</button>
+          </section>
+
+          <section class="cc-page" data-page="addresses">
+            <h4>Meus endereços</h4><p class="cc-sub">Confira o endereço salvo para suas compras.</p>
+            <div class="cc-address-card"><span class="cc-tag">Principal</span><i class="fa-solid fa-location-dot"></i><div><strong>Endereço de entrega</strong><p id="account-user-address">Nenhum endereço cadastrado.</p></div></div>
+            <button class="cc-primary" type="button" data-go="profile">Editar endereço</button>
+          </section>
+
+          <section class="cc-page" data-page="profile">
+            <h4>Meus dados</h4><p class="cc-sub">Mantenha seus dados de contato e entrega atualizados.</p>
+            <div class="cc-data-grid">
+              <div><span>E-mail</span><strong id="cc-profile-email">—</strong></div>
+              <div><span>Telefone</span><strong id="account-user-phone">—</strong></div>
+              <div><span>CPF</span><strong id="account-user-cpf">—</strong></div>
+              <div><span>Endereço</span><strong id="cc-address-short">—</strong></div>
+            </div>
+            <button id="edit-account-btn" type="button" class="cc-primary"><i class="fa-regular fa-pen-to-square"></i> Editar meus dados</button>
+            <div id="account-edit-box" class="account-edit-box hidden">
+              <h4>Editar meus dados</h4>
+              <form id="edit-account-form" class="elnora-form register-grid">
+                <label class="full-field">Nome completo<input id="edit-name" required></label>
+                <label>Celular / WhatsApp<input id="edit-phone" type="tel" maxlength="15"></label>
+                <label>CEP<input id="edit-cep" maxlength="9"></label>
+                <label class="full-field">Endereço<input id="edit-address"></label>
+                <label>Número<input id="edit-number"></label><label>Complemento<input id="edit-complement"></label>
+                <label>Bairro<input id="edit-neighborhood"></label><label>Cidade<input id="edit-city"></label>
+                <label>Estado<input id="edit-state" maxlength="2" placeholder="SP"></label>
+                <button class="gold-action full-field" type="submit">Salvar alterações</button>
+                <div id="edit-account-message" class="form-message full-field" aria-live="polite"></div>
+              </form>
+            </div>
+          </section>
+
+          <section class="cc-page" data-page="security">
+            <h4>Segurança</h4><p class="cc-sub">Gerencie o acesso à sua conta.</p>
+            <div class="cc-security"><i class="fa-solid fa-lock"></i><div><strong>Senha da conta</strong><p>Na versão publicada, a alteração e recuperação serão feitas por fluxo seguro de autenticação.</p></div></div>
+            <button id="cc-change-password" class="cc-primary" type="button">Alterar senha</button>
+            <div id="cc-password-box" class="account-edit-box hidden">
+              <form id="cc-password-form" class="elnora-form">
+                <label>Senha atual<input id="cc-current-password" type="password" required></label>
+                <label>Nova senha<input id="cc-new-password" type="password" minlength="6" required></label>
+                <label>Confirmar nova senha<input id="cc-confirm-password" type="password" minlength="6" required></label>
+                <button class="gold-action" type="submit">Salvar nova senha</button>
+                <div id="cc-password-message" class="form-message"></div>
+              </form>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+      </div>
+    </div>
+<div class="favorites-panel" id="favorites-panel"><div class="favorites-card"><button class="panel-close" data-close="favorites-panel" type="button">&times;</button><h3>Meus Favoritos</h3><p>Produtos salvos neste navegador.</p><div id="favorites-list"></div></div></div>
+<div class="elnora-modal" id="elnora-modal" aria-hidden="true">
+        <div class="elnora-modal-card" role="dialog" aria-modal="true" aria-labelledby="elnora-modal-title">
+            <button class="elnora-modal-close" type="button" aria-label="Fechar">&times;</button>
+            <div class="elnora-modal-icon"><i class="fa-regular fa-gem"></i></div>
+            <h3 id="elnora-modal-title">ELNORA</h3>
+            <p id="elnora-modal-text"></p>
+            <button class="elnora-modal-ok" type="button">Entendi</button>
+        </div>
+    </div>
+
+    <div class="cart-overlay"></div>
+    <aside class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Meu Carrinho <i class="fa-solid fa-cart-shopping"></i></h3> <button
+                class="close-cart-btn">&times;</button>
+        </div>
+        <div class="cart-body"></div>
+
+        <div class="cart-footer">
+            <div class="options-toggle">
+                <button class="delivery-btn active" data-option="delivery"><i class="fa-solid fa-truck-fast"></i>
+                    Entrega</button>
+                <button class="delivery-btn" data-option="pickup"><i class="fa-solid fa-store"></i> Retirada</button>
+            </div>
+
+            <div id="delivery-form-container">
+                <div class="form-group"><label for="delivery-name">Seu Nome</label><input type="text" id="delivery-name"
+                        placeholder="Nome e sobrenome" required></div>
+                <div class="form-group"><label for="delivery-phone">Seu Telefone (WhatsApp)</label><input type="tel"
+                        id="delivery-phone" placeholder="(XX) XXXXX-XXXX" maxlength="15" required></div>
+                <div class="form-group pix-customer-field"><label for="delivery-email">E-mail para o pagamento Pix</label><input type="email"
+                        id="delivery-email" placeholder="seuemail@exemplo.com" autocomplete="email"></div>
+                <div class="form-group pix-customer-field"><label for="delivery-cpf">CPF do pagador</label><input type="text"
+                        id="delivery-cpf" placeholder="000.000.000-00" inputmode="numeric" maxlength="14"></div>
+                <div class="form-group"><label for="delivery-cep">CEP</label><input type="text" id="delivery-cep"
+                        placeholder="00000-000" maxlength="9" required></div>
+                <div class="form-group"><label for="delivery-address">Endereço</label><textarea id="delivery-address"
+                        placeholder="Lote, Quadra, Numero" required></textarea>
+                </div>
+                <div class="delivery-fee-notice delivery-auto-box">
+  <strong><i class="fa-solid fa-location-dot"></i> Entrega local automática</strong>
+  <span>Digite o CEP de Itapevi ou Cotia. O sistema valida a cidade, calcula a rota e cobra o combustível de ida + volta automaticamente.</span>
+  <div id="delivery-calc-status">Aguardando CEP.</div>
+</div>
+
+                <div class="payment-options-container">
+                    <h4>Forma de Pagamento</h4>
+                    <label class="payment-option selected"><input type="radio" name="payment" value="PIX" checked>
+                        PIX</label>
+                    <label class="payment-option"><input type="radio" name="payment" value="Cartão de Crédito"> Cartão
+                        de Crédito</label>
+                    <label class="payment-option"><input type="radio" name="payment" value="Cartão de Débito"> Cartão de
+                        Débito</label>
+                    <label class="payment-option"><input type="radio" name="payment" value="Dinheiro"> Dinheiro</label>
+
+                    <div id="troco-container">
+                        <div class="form-group"><label for="troco-para">Precisa de troco para quanto?</label><input
+                                type="number" id="troco-para" placeholder="Ex: 50"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="pickup-form-container" style="display: none;">
+                <div class="form-group"><label for="pickup-name">Nome para Retirada</label><input type="text"
+                        id="pickup-name" placeholder="Digite nome e sobrenome" required></div>
+                <div class="form-group">
+                    <label>Agende a Data e Hora</label>
+                    <div class="date-time-row">
+                        <input type="date" id="pickup-date" required>
+                        <select id="pickup-time" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="08:00">08:00</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coupon-container"><input type="text" id="coupon-input" placeholder="Cupom de desconto"><button
+                    id="apply-coupon-btn">Aplicar</button></div>
+            <p id="coupon-feedback" class="coupon-feedback"></p>
+            <div class="cart-summary">
+                <div class="summary-line"><span>Subtotal</span><span id="cart-subtotal">R$ 0,00</span></div>
+                <div class="summary-line discount-line" style="display: none;"><span>Desconto</span><span
+                        id="cart-discount">- R$ 0,00</span></div>
+                <div class="summary-line delivery-cost-line" id="delivery-cost-line" style="display:none;">
+                    <span>Taxa de entrega</span><span id="cart-delivery-cost">R$ 0,00</span>
+                </div>
+                <div class="summary-line total"><span>Total</span><span id="cart-total">R$ 0,00</span></div>
+            </div>
+        </div>
+
+        <div class="finish-order-btn-container">
+            <button id="finish-order-btn" class="finish-order-btn" disabled><i class="fa-solid fa-cart-shopping"></i> Finalizar
+                Pedido</button>
+        </div>
+    </aside>
+
+    <div id="pix-payment-modal" class="pix-payment-modal" aria-hidden="true">
+        <div class="pix-payment-backdrop" data-pix-close></div>
+        <section class="pix-payment-card" role="dialog" aria-modal="true" aria-labelledby="pix-payment-title">
+            <button type="button" class="pix-payment-close" data-pix-close aria-label="Fechar pagamento">&times;</button>
+            <h3 id="pix-payment-title">Pagamento via Pix</h3>
+            <p id="pix-payment-message">Gerando seu Pix com segurança...</p>
+            <div id="pix-payment-loading" class="pix-payment-loading"><i class="fa-solid fa-spinner fa-spin"></i></div>
+            <div id="pix-payment-content" hidden>
+                <div class="pix-total-label">Valor do pedido</div>
+                <strong id="pix-payment-total" class="pix-payment-total">R$ 0,00</strong>
+                <img id="pix-qr-image" class="pix-qr-image" alt="QR Code Pix">
+                <label for="pix-copy-code">Pix Copia e Cola</label>
+                <div class="pix-copy-row">
+                    <textarea id="pix-copy-code" readonly></textarea>
+                    <button id="pix-copy-btn" type="button"><i class="fa-regular fa-copy"></i> Copiar</button>
+                </div>
+                <div id="pix-payment-status" class="pix-payment-status pending"><i class="fa-regular fa-clock"></i> Aguardando pagamento</div>
+                <small class="pix-payment-help">Depois de pagar, esta tela verifica a confirmação automaticamente.</small>
+                <button id="pix-whatsapp-order" class="pix-whatsapp-order" type="button" hidden><i class="fa-brands fa-whatsapp"></i> Enviar pedido confirmado</button>
+            </div>
+            <div id="pix-payment-error" class="pix-payment-error" hidden></div>
+        </section>
+    </div>
+
+    <div class="view-cart-banner">
+        <p>Total: <span id="banner-total">R$ 0,00</span></p>
+        <button class="view-cart-banner-btn">Ver Carrinho</button>
+    </div>
+
+    <footer>
+    <div class="footer-pro-grid">
+<div class="footer-pro-brand"><strong>ELNORA CALÇADOS & VAREJO</strong><span>Elegância em cada passo</span></div>
+<div><strong>Atendimento</strong><a href="https://wa.me/5511997523804">WhatsApp</a><span>Atendimento online</span></div>
+<div><strong>Institucional</strong><a href="legal/privacidade.html">Privacidade</a><a href="legal/termos.html">Termos de compra</a><a href="legal/trocas-devolucoes.html">Trocas e devoluções</a></div>
+<div><strong>Compra e entrega</strong><a href="legal/entrega.html">Política de entrega</a><span>Pagamento seguro</span><span>Estoque por tamanho</span></div>
+</div>
+<p class="footer-copyright">© 2026 ELNORA Calçados & Varejo — Todos os direitos reservados.</p></footer>
+
+
+
+
+    <div class="nora-whatsapp-widget">
+      <div class="nora-status-card" aria-hidden="true">
+        <strong>Elnora</strong>
+        <span>Consultora Virtual ELNORA</span>
+        <small><i></i> Online • Clique para conversar</small>
+      </div>
+      <a id="whatsapp-floating"
+         class="whatsapp-floating nora-whatsapp"
+         href="https://wa.me/5511997523804?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20ELNORA%20Cal%C3%A7ados%20%26%20Varejo%20e%20gostaria%20de%20atendimento."
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Falar com Elnora, consultora virtual da ELNORA, pelo WhatsApp"
+         title="Fale com a Elnora pelo WhatsApp">
+        <img src="assets/images/assistente/nora-atendente.jpeg" alt="Elnora, consultora virtual da ELNORA">
+        <span class="nora-online-dot" aria-hidden="true"></span>
+        <span class="nora-whatsapp-badge"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span>
+      </a>
+    </div>
+
+
+<div class="account-panel" id="forgot-password-panel">
+  <div class="account-card recovery-card">
+    <button class="panel-close" data-close="forgot-password-panel" type="button">&times;</button>
+    <div class="panel-brand"><img src="assets/images/logo/logo-elnora-transparente.png" alt="ELNORA"></div>
+    <h3>Recuperar senha</h3>
+    <p>Informe o e-mail cadastrado. Se a conta estiver conectada ao Supabase, enviaremos um link seguro para redefinir sua senha.</p>
+    <form id="forgot-password-form" class="elnora-form">
+      <label>E-mail<input id="forgot-email" type="email" required placeholder="seuemail@exemplo.com"></label>
+      <button class="gold-action" type="submit">Continuar</button>
+      <div id="forgot-message" class="form-message" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config/config.js"></script>
+<script src="professional.js"></script>
+<script src="analytics/ga4.js"></script>
+<aside id="privacy-consent" class="privacy-consent" role="dialog" aria-label="Preferências de privacidade" aria-live="polite">
+  <button id="privacy-close" class="privacy-close" type="button" aria-label="Fechar aviso">&times;</button>
+  <div class="privacy-copy">
+    <strong>Privacidade na ELNORA</strong>
+    <p>Usamos recursos necessários para a loja funcionar. Com sua permissão, também usamos métricas para melhorar sua experiência.</p>
+    <a href="legal/privacidade.html">Política de Privacidade</a>
+  </div>
+  <div class="privacy-actions">
+    <button id="privacy-essential" class="privacy-essential" type="button">Somente necessários</button>
+    <button id="privacy-accept" class="privacy-accept" type="button">Aceitar métricas</button>
+  </div>
+</aside>
+<script>
+(()=>{
+  const key="elnora_privacy_choice_v2";
+  const box=document.getElementById("privacy-consent");
+  const save=(choice)=>{localStorage.setItem(key,choice);box.classList.remove("is-visible");if(choice==="analytics")window.ELNORA_ANALYTICS?.load?.();};
+  if(!localStorage.getItem(key)) requestAnimationFrame(()=>box.classList.add("is-visible"));
+  else if(localStorage.getItem(key)==="analytics") window.ELNORA_ANALYTICS?.load?.();
+  document.getElementById("privacy-essential")?.addEventListener("click",()=>save("essential"));
+  document.getElementById("privacy-accept")?.addEventListener("click",()=>save("analytics"));
+  document.getElementById("privacy-close")?.addEventListener("click",()=>save("essential"));
+})();
+</script>
+<script src="delivery-auto.js"></script>
+<script src="script.js"></script>
+<script src="ecommerce-pro.js"></script>
+  <script src="mobile-actions.js"></script>
+    <script src="categories-mobile.js"></script>
+</body>
+
+</html>
