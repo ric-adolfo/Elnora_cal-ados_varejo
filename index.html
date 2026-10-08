@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilo.css">
     <title>ELNORA Calçados & Varejo | Elegância em cada passo</title>
     <meta name="description" content="ELNORA Calçados & Varejo — calçados com elegância, conforto e atendimento online.">
     <meta name="robots" content="index,follow">
@@ -15,7 +15,8 @@
 
 <body>
 
-    <div class="benefits-bar" aria-label="Benefícios da loja">
+    <div id="elnora-fixed-top" class="elnora-fixed-top">
+<div class="benefits-bar" aria-label="Benefícios da loja">
         <div class="benefit-item"><i class="fa-solid fa-truck-fast"></i><span><strong>Frete Grátis</strong><small>em compras acima de R$ 199</small></span></div>
         <div class="benefit-divider"></div>
         <div class="benefit-item"><i class="fa-regular fa-credit-card"></i><span><strong>Até 3x no Cartão</strong><small>Parcelamento sem juros</small></span></div>
@@ -86,6 +87,8 @@
             </div>
             <a class="master-nav-link" id="master-nav-link" href="admin/index.html" hidden aria-label="Abrir painel do Usuário Master"><i class="fa-solid fa-user-shield"></i><span>Usuário Master</span></a>
         </nav>
+    </div>
+
     </div>
 
     <section class="hero-section hero-image-banner" aria-label="Elnora Calçados & Varejo">
@@ -427,24 +430,42 @@
 
 
 
-    <div class="nora-whatsapp-widget">
+    <div class="nora-whatsapp-widget elnora-ai-widget">
       <div class="nora-status-card" aria-hidden="true">
         <strong>Elnora</strong>
         <span>Consultora Virtual ELNORA</span>
         <small><i></i> Online • Clique para conversar</small>
       </div>
-      <a id="whatsapp-floating"
-         class="whatsapp-floating nora-whatsapp"
-         href="https://wa.me/5511997523804?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20ELNORA%20Cal%C3%A7ados%20%26%20Varejo%20e%20gostaria%20de%20atendimento."
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="Falar com Elnora, consultora virtual da ELNORA, pelo WhatsApp"
-         title="Fale com a Elnora pelo WhatsApp">
+      <button id="elnora-chat-toggle" class="whatsapp-floating nora-whatsapp elnora-chat-toggle" type="button" aria-label="Conversar com Elnora, consultora virtual da ELNORA" title="Conversar com a Elnora">
         <img src="assets/images/assistente/nora-atendente.jpeg" alt="Elnora, consultora virtual da ELNORA">
         <span class="nora-online-dot" aria-hidden="true"></span>
-        <span class="nora-whatsapp-badge"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span>
-      </a>
+      </button>
     </div>
+
+    <section class="elnora-chat-panel" id="elnora-chat-panel" aria-label="Chat com Elnora" aria-hidden="true">
+      <header class="elnora-chat-header">
+        <img src="assets/images/assistente/nora-atendente.jpeg" alt="Elnora">
+        <div class="elnora-chat-identity">
+          <strong>Elnora</strong>
+          <span>Consultora Virtual • Online <i class="elnora-header-online" aria-hidden="true"></i></span>
+        </div>
+        <span class="elnora-chat-minimize" aria-hidden="true">−</span>
+        <button id="elnora-chat-close" type="button" aria-label="Fechar chat">×</button>
+      </header>
+      <div class="elnora-chat-messages" id="elnora-chat-messages" aria-live="polite">
+        <div class="elnora-welcome-row">
+          <img src="assets/images/assistente/nora-atendente.jpeg" alt="" aria-hidden="true">
+          <div class="elnora-msg elnora-msg-bot">Olá! 👋 Sou a Elnora, consultora virtual da<br>ELNORA Calçados &amp; Varejo.<br>Como posso ajudar?</div>
+        </div>
+      </div>
+      <div class="elnora-chat-composer">
+        <form class="elnora-chat-form" id="elnora-chat-form">
+          <input id="elnora-chat-input" type="text" maxlength="2000" autocomplete="off" placeholder="Digite sua mensagem..." aria-label="Mensagem para Elnora" required>
+          <button type="submit" aria-label="Enviar mensagem"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+        <a class="elnora-chat-whatsapp" href="https://wa.me/5511997523804?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20ELNORA%20Cal%C3%A7ados%20%26%20Varejo%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i><span>Falar pelo WhatsApp</span><i class="fa-solid fa-chevron-right elnora-wa-arrow" aria-hidden="true"></i></a>
+      </div>
+    </section>
 
 
 <div class="account-panel" id="forgot-password-panel">
@@ -492,8 +513,15 @@
 <script src="delivery-auto.js"></script>
 <script src="script.js"></script>
 <script src="ecommerce-pro.js"></script>
+<script src="elnora-chat.js"></script>
   <script src="mobile-actions.js"></script>
     <script src="categories-mobile.js"></script>
+
+<button id="elnora-back-to-top" class="elnora-back-to-top" type="button"
+        aria-label="Voltar ao topo" title="Voltar ao topo">
+  <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</button>
+<script src="fixed-header.js"></script>
 </body>
 
 </html>

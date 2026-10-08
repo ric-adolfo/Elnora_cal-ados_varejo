@@ -26,6 +26,7 @@ window.ELNORA_PRO={
  async createOrder(payload){const {data,error}=await sb.functions.invoke("create-order",{body:payload});if(error)throw error;return data},
  async quoteShipping(payload){const {data,error}=await sb.functions.invoke("shipping-quote",{body:payload});if(error)throw error;return data},
  async createPayment(payload){const {data,error}=await sb.functions.invoke("create-payment",{body:payload});if(error)throw error;return data},
- async paymentStatus(paymentId){const {data,error}=await sb.functions.invoke("payment-status",{body:{payment_id:paymentId}});if(error)throw error;return data}
+ async askElnora(message){const {data,error}=await sb.functions.invoke("nora-ai",{body:{message}});if(error)throw error;return data},
+  async paymentStatus(paymentId){const {data,error}=await sb.functions.invoke("payment-status",{body:{payment_id:paymentId}});if(error)throw error;return data}
 };
 })();
