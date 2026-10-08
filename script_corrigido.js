@@ -965,33 +965,29 @@ document.addEventListener("DOMContentLoaded",()=>{
    document.getElementById("produtos")?.scrollIntoView({behavior:"smooth"});
  });
  $("#cc-change-password")?.addEventListener("click",()=>$("#cc-password-box")?.classList.toggle("hidden"));
- $("#cc-password-form")?.addEventListener("submit",e=>{
-   e.preventDefault(); const u=current(); if(!u)return;
-   const cur=$("#cc-current-password").value,n=$("#cc-new-password").value,c=$("#cc-confirm-password").value,m=$("#cc-password-message");
-   const set=(t,ok)=>{m.textContent=t;m.className="form-message "+(ok?"success":"error")};
-   if(cur!==u.password)return set("A senha atual está incorreta.",false);
-   if(n.length<6)return set("A nova senha precisa ter pelo menos 6 caracteres.",false);
-   if(n!==c)return set("A confirmação da nova senha não confere.",false);
-   const a=users(),i=a.findIndex(x=>x.id===u.id);a[i].password=n;localStorage.setItem(USERS,JSON.stringify(a));
-   e.target.reset();set("Senha alterada nesta versão de teste.",true);
- });
- window.addEventListener("elnora:favorites-changed",refresh);
- $("#account-btn")?.addEventListener("click",()=>setTimeout(refresh,20));
- refresh();
-});
-
-
-// ===== ELNORA V18 — sessão da Minha Conta corrigida =====
-document.addEventListener("DOMContentLoaded",()=>{
-  const SESSION_KEY="elnora_session_v2";
-  const accountPanel=document.getElementById("account-panel");
-  const accountBtn=document.getElementById("account-btn");
-  const closeBtn=accountPanel?.querySelector('[data-close="account-panel"]');
-
-  // V39: abre a área Minha Conta pelo botão do cabeçalho.
-  accountBtn?.addEventListener("click",()=>{
-    accountPanel?.classList.add("show");
-    accountPanel?.setAttribute("aria-hidden","false");
+   $("#cc-password-form")?.addEventListener("submit",async e=>{
+    e.preventDefault();
+    const form=e.currentTarget;
+    const cur=$("#cc-current-password")?.value||"",n=$("#cc-new-password")?.value||"",c=$("#cc-confirm-password")?.value||"",m=$("#cc-password-message");
+    const set=(t,ok)=>{if(m){m.textContent=t;m.className="form-message "+(ok?"success":"error")}};
+    const pro=window.ELNORA_PRO;
+    if(!pro?.ready)return set("Autenticação indisponível. Tente novamente mais tarde.",false);
+    if(n.length<8)return set("Use uma nova senha com pelo menos 8 caracteres.",false);
+    if(n!==c)return set("A confirmação da nova senha não confere.",false);
+    if(!cur)return set("Informe sua senha atual.",false);
+    const submit=form.querySelector('[type="submit"]');
+    if(submit)submit.disabled=true;
+    try{
+      const {data:{user},error:userError}=await pro.supabase.auth.getUser();
+      if(userError||!user)throw new Error("Sessão Supabase ausente. Entre novamente na conta antes de alterar a senha.");
+      const {error:authError}=await pro.supabase.auth.signInWithPassword({email:user.email,password:cur});
+      if(authError)throw new Error("A senha atual não foi confirmada. Confira-a e tente novamente.");
+      const {error:changeError}=await pro.supabase.auth.updateUser({password:n});
+      if(changeError)throw changeError;
+      form.reset();
+      set("Senha atualizada com segurança no Supabase.",true);
+    }catch(err){set(err?.message||"Não foi possível alterar a senha.",false)}
+    finally{if(submit)submit.disabled=false}
   });
 
   function clearAccountSession(){
