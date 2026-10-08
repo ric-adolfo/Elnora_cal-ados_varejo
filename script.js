@@ -1005,6 +1005,10 @@ document.addEventListener("DOMContentLoaded",()=>{
     if(pass) pass.value="";
   }
 
+  // Referências dos botões da conta (evita ReferenceError).
+  const closeBtn = document.querySelector("#account-panel .panel-close");
+  const accountBtn = document.getElementById("account-btn");
+
   // Fechar a janela da conta equivale a encerrar o acesso à área protegida.
   closeBtn?.addEventListener("click",clearAccountSession,true);
 
